@@ -9,39 +9,6 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-// func uploadFile(c *gin.Context) {
-// 	destination, err := os.Getwd()
-// 	if err != nil {
-// 		log.Println("Destination folder unable to open")
-// 	}
-// 	file, _ := c.FormFile("file")
-// 	destination = destination + "/files/"
-// 	destination = destination + file.Filename
-// 	if err := c.SaveUploadedFile(file, destination); err != nil {
-// 		c.String(http.StatusBadRequest, "upload file err: %s", err.Error())
-// 		return
-// 	}
-// 	c.String(http.StatusOK, fmt.Sprintf("'%s' uploaded!", file.Filename))
-// }
-
-// func createUser(c *gin.Context) {
-
-// }
-
-// DB, err := sql.Open("sqlite3", "./data.db")
-// if err != nil {
-// 	log.Println(err)
-// }
-// query := `CREATE TABLE POSTS (
-// 	ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-// 	username TEXT,
-// 	data TEXT
-// );`
-// _, err = DB.Exec(query)
-// if err != nil {
-// 	log.Println(err)
-// }
-
 var routes = map[string]string{
 	"/home": "GET",
 	"/loginuser": "POST",
